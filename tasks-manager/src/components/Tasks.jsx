@@ -1,22 +1,32 @@
-import { IoChevronForwardOutline, IoTrashOutline   } from "react-icons/io5";
+import {IoTrashOutline } from "react-icons/io5";
 import { GiCheckMark } from "react-icons/gi";
+import { TiChevronRightOutline } from "react-icons/ti";
 import { ContainerTask } from "../styles/Styles";
+import { useNavigate } from "react-router-dom";
 
-const Tasks = ({tasks, onTaskClick, onDeleteTask}) => {
+const Tasks = ({ tasks, onTaskClick, onDeleteTask }) => {
+  const navigate = useNavigate();
+
+  const onSeeDatails = (task) => {
+    const query = new URLSearchParams();
+    query.set('title', task.title);
+    query.set('description', task.description);
+    navigate(`/task?${query.toString()}`);
+  }
   return (
     <>
-    
+
       {tasks.map(task => <ContainerTask key={task.id}>
-        <p onClick={() => onTaskClick(task.id)}>{task.title}
+        <button onClick={() => onTaskClick(task.id)}>{task.title}
           {task.isCompleted && <span>     <GiCheckMark /></span>}
-        </p>
+        </button>
 
-        <p><IoChevronForwardOutline /></p>
+        <button onClick={() => onSeeDatails(task)}><TiChevronRightOutline /></button>
 
-        <p onClick={() => onDeleteTask(task.id)}><IoTrashOutline/> </p>
-        </ContainerTask>)}
-    
-    
+        <button onClick={() => onDeleteTask(task.id)}><IoTrashOutline /> </button>
+      </ContainerTask>)}
+
+
     </>
   )
 }
