@@ -9,13 +9,19 @@ const AddTask = ({onAddTaskSubmit}) => {
     <Container>
       <input type="text" placeholder='Digite o título da tarefa'
       value={title} 
-      onChange={(e) => setTitle(e.target.value)}/>
+      onChange={(e) => setTitle(e.target.value)}
+      required/>
 
       <input type="text" placeholder='Digite a descrição da tarefa' 
       value={description}
-      onChange={(e) => setDescription(e.target.value)}/>
+      onChange={(e) => setDescription(e.target.value)}
+      required/>
 
-      <button onClick={() => onAddTaskSubmit(title, description)}>Adicionar</button>
+      <button onClick={() => {
+        onAddTaskSubmit(title, description);
+        setDescription("")
+        setTitle("")
+      }}>Adicionar</button>
     </Container>
     </>
   )

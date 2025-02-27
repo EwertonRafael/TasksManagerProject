@@ -46,8 +46,10 @@ const onAddTaskSubmit = (title, description) => {
     description,
     isCompleted: false
   }
-  if(title && description){
+  if(title.trim() && description.trim()){
     setTasks([...tasks, newTask])
+  }else{
+    alert("Preencha todos os campos")
   }
 }
   return (
