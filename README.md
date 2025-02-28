@@ -50,6 +50,8 @@ Filtrar Tarefas: Visualize apenas as tarefas concluídas, pendentes ou todas
 
 Marcar como Concluída: Clique na tarefa para marcá-la como concluída
 
+![marcada como concluída](tasks-manager/public/tarefaConcluida.png)
+
 Detalhar Tarefa: Clique no símbolo e vá para a segunda página de detalhamento da tarefa
 
 ![botão de detalhamento]()
