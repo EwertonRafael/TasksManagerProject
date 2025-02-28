@@ -1,4 +1,4 @@
-import { IoTrashOutline, } from "react-icons/io5";
+import { IoTrashOutline } from "react-icons/io5";
 import { LuSquareChevronRight } from "react-icons/lu";
 
 import { GiCheckMark } from "react-icons/gi";
