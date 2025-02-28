@@ -3,20 +3,24 @@ import './App.css'
 import AddTask from './components/AddTask'
 import Tasks from './components/Tasks'
 import styled from 'styled-components'
+import FilterTasks from './components/FilterTasks'
 
-const TitleH1 = styled.h1`
+const Title = styled.h1`
   color: #343a40;
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 2rem;
 `;
+
 function App() {
   const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem('tasks')) || []
   )
+  const [filteredTasks, setFilteredTasks] = useState(tasks);
 
   useEffect(() => {
-    localStorage.setItem('tasks', JSON.stringify(tasks))
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    setFilteredTasks(tasks);
   }, [tasks])
 
 
@@ -49,9 +53,10 @@ function App() {
   }
   return (
     <>
-      <TitleH1>Gerenciador de Tarefas</TitleH1>
+      <Title>Gerenciador de Tarefas</Title>
       <AddTask onAddTaskSubmit={onAddTaskSubmit} />
-      <Tasks tasks={tasks} onTaskClick={onTaskClick} onDeleteTask={onDeleteTask} />
+      <FilterTasks tasks={tasks} setFilteredTasks={setFilteredTasks} />
+      <Tasks tasks={filteredTasks} onTaskClick={onTaskClick}onDeleteTask={onDeleteTask} />
     </>
   )
 }
