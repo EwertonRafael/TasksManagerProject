@@ -22,7 +22,7 @@ Para rodar o projeto localmente, siga os passos abaixo:
 
 ### Clone o repositório:
 
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/EwertonRafael/TasksManagerProject
 
 ### Entre na pasta do projeto:
 
@@ -46,6 +46,8 @@ Adicionar Tarefa: Insira um título e uma descrição para criar uma nova tarefa
 
 Filtrar Tarefas: Visualize apenas as tarefas concluídas, pendentes ou todas
 
+![bot~es de filtrar](tasks-manager/public/botoesDeFiltrar.png)
+
 Marcar como Concluída: Clique na tarefa para marcá-la como concluída
 
 Detalhar Tarefa: Clique no símbolo e vá para a segunda página de detalhamento da tarefa
@@ -62,24 +64,20 @@ Interface do Usuário
 
 A interface foi projetada de forma intuitiva, com botões bem posicionados e um design responsivo.
 
-![interface]()
+![interface](tasks-manager/public/interface.png)
 
 ![tela de detalhamento da tarefa](tasks-manager/public/pagDetalhe.png)
 
-Melhorias Futuras
+### Melhorias Futuras
 
 Integração com backend para persistência de dados
 
-Autenticação de usuários
-
-Drag and Drop para reordenar tarefas
-
-Contribuição
+### Contribuição
 
 Sinta-se à vontade para contribuir com melhorias para este projeto!
 
-Licença
+---
 
-Este projeto está sob a licença MIT.
+### Contato
 
-gere isso em formato .md na parte do edit do github
+LinkedIn: https://www.linkedin.com/in/ewerton-bertoldo/
