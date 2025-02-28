@@ -40,7 +40,9 @@ Estrutura de Arquivos
 
 ![estrutura do projeto](tasks-manager/public/estruturaDoProjeto.png)
 
-Funcionalidades
+### Funcionalidades
+
+----
 
 Adicionar Tarefa: Insira um título e uma descrição para criar uma nova tarefa
 
@@ -54,7 +56,7 @@ Marcar como Concluída: Clique na tarefa para marcá-la como concluída
 
 Detalhar Tarefa: Clique no símbolo e vá para a segunda página de detalhamento da tarefa
 
-![botão de detalhamento]()
+![botão de detalhamento](tasks-manager/public/botaoDoDetalhe.png)
 
 Remover Tarefa: Exclua tarefas indesejadas
 
@@ -62,7 +64,9 @@ Remover Tarefa: Exclua tarefas indesejadas
 
 Salvar no LocalStorage: As tarefas permanecem salvas após recarregar a página
 
-Interface do Usuário
+---
+
+### Interface do Usuário
 
 A interface foi projetada de forma intuitiva, com botões bem posicionados e um design responsivo.
 
